@@ -1,0 +1,26 @@
+name: 'updraft-github-action'
+description: This step will help you to upload your app's builds to Updraft. For more information please reach [Updraft](https://getupdraft.com) site.
+inputs:
+  api_key:  # id of input
+    description: 'Updraft API_KEY. Your API Key you will find in your Profile.'
+    required: true
+    default: ''
+  app_key:
+    description: 'Updraft APP_KEY. The App Key you will find on the application overview.
+    The App key differs for each environment.'
+    required: true
+    default: ''
+  app_path:
+    description: 'Path to app's binary file (IPA/APK/AAB) to upload'
+    required: true
+    default: ''
+  release_notes:
+    description: 'Release notes'
+    required: false
+    default: ''
+outputs:
+  response_json: # id of output
+    description: 'Deploy Updraft step output json'
+runs:
+  using: 'node20'
+  main: 'src/index.js'
