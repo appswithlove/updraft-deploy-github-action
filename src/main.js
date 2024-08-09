@@ -21,7 +21,8 @@ export async function run() {
           }
         };
         
-        await exec.exec(`curl -f -F whats_new="${releaseNotes}" -F build_type="github-action" -F app=@${appPath} -X PUT https://getupdraft.com/api/app_upload/${appKey}/${apiKey}/`);
+        // -f -F whats_new="${releaseNotes}" -F build_type="github-action" -F app=@${appPath} 
+        await exec.exec(`curl -X PUT https://getupdraft.com/api/app_upload/${appKey}/${apiKey}/`);
         
         console.log(`output: ${commandOutput}, error: ${commandError}`);
     } catch (error) {
