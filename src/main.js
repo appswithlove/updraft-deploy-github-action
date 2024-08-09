@@ -27,7 +27,7 @@ export async function run() {
             '-F build_type="github-action"',
             `-F app=@${appPath}`,
             `-X PUT`,
-            'https://getupdraft.com/api/app_upload/${appKey}/${apiKey}/',
+            `https://getupdraft.com/api/app_upload/${appKey}/${apiKey}/`,
         ]);
         
         console.log(`output: ${commandOutput}, error: ${commandError}`);
