@@ -28093,12 +28093,12 @@ async function run() {
         };
         
         await exec.exec('curl', [
-            '--silent',
             '-f',
             `-F whats_new="${releaseNotes}"`,
-            '-F build_type="bitrise"',
+            '-F build_type="github-action"',
             `-F app=@${appPath}`,
-            `-X PUT https://getupdraft.com/api/app_upload/${appKey}/${apiKey}/`,
+            `-X PUT`,
+            'https://getupdraft.com/api/app_upload/${appKey}/${apiKey}/',
         ]);
         
         console.log(`output: ${commandOutput}, error: ${commandError}`);
