@@ -28093,7 +28093,7 @@ async function run() {
         };
         
         await exec.exec('curl', [
-            '-f -v',
+            '-v',
             `-F whats_new="${releaseNotes}"`,
             '-F build_type="github-action"',
             `-F app=@${appPath}`,
