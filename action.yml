@@ -6,12 +6,11 @@ inputs:
     required: true
     default: ''
   app_key:
-    description: 'Updraft APP_KEY. The App Key you will find on the application overview.
-    The App key differs for each environment.'
+    description: 'Updraft APP_KEY. The App Key you will find on the application overview. The App key differs for each environment.'
     required: true
     default: ''
   app_path:
-    description: 'Path to app's binary file (IPA/APK/AAB) to upload'
+    description: "Path to app's binary file (IPA/APK/AAB) to upload"
     required: true
     default: ''
   release_notes:
